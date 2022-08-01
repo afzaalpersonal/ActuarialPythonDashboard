@@ -53,6 +53,64 @@ p {
 	margin: 0 0 20px;
 }
 
+/* Dashboard - Loading screen */
+._dash-loading {
+	position: relative;
+	width: 0;
+	height: 0;
+	color: transparent;
+	text-align: center;
+	margin: auto;
+}
+
+._dash-loading::after {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	content: '';
+	width: 50px;
+	height: 50px;
+	color: #d9ab16;
+	border: 0.25em solid currentColor;
+	border-right-color: transparent;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+	-webkit-animation: spinner-border 0.75s linear infinite;
+	-moz-animation: spinner-border 0.75s linear infinite;
+	-ms-animation: spinner-border 0.75s linear infinite;
+	-o-animation: spinner-border 0.75s linear infinite;
+	animation: spinner-border 0.75s linear infinite;
+}
+
+.component-submit-load .dash-spinner {
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100px;
+    position: relative;
+    height: 50px;
+background: #113458;
+    margin: 0 100px 0 0;
+    border-radius: 0px 5px 5px 0px;
+line-height: 50px;
+}
+.component-submit-load .dash-spinner.dash-dot-spinner > div {
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+}
+.component-submit-load {
+    /* position: absolute;
+    right: 0;
+    top: 0;
+    background: green;
+    width: 100px;
+    height: 50px; */
+}
+
 /* Dashboard - Global */
 #w7-content {
 	min-width: 1200px;
