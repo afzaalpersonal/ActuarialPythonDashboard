@@ -1,0 +1,48 @@
+/* CSS Flex */
+.block-flex {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.block-flex.block-flex-start {
+	align-items: start;
+	justify-content: flex-start;
+}
+.block-flex.block-flex-around {
+	justify-content: space-around;
+}
+
+/* Column widths - Flex basis */
+.block-flex .flex-col-2 {
+	flex: 0 1 50%;
+}
+
+/* Column widths - Traditional Width */
+.block-flex .flex-col-2p {
+	width: 50%;
+}
+
+/* Add gap sizes */
+.block-flex.flex-gap-20 {
+	gap: 20px;
+}
+.block-flex.flex-gap-30 {
+	gap: 30px;
+}
+
+/* Add row gap sizes */
+.block-flex.flex-row-gap-20 {
+	row-gap: 20px;
+}
+.block-flex.flex-row-gap-30 {
+	row-gap: 30px;
+}
+
+/* Add column gap sizes */
+.block-flex.flex-column-gap-20 {
+	column-gap: 20px;
+}
+.block-flex.flex-column-gap-30 {
+	column-gap: 30px;
+}

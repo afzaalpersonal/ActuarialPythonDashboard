@@ -1,0 +1,10 @@
+/* Dash - Dropdown component */
+.dash-dropdown .Select-control {
+    height: 44px;
+	border-color: #dadada;
+}
+
+.dash-dropdown .Select--single > .Select-control .Select-value,
+.dash-dropdown .Select-placeholder {
+    line-height: 42px;
+}

@@ -1,0 +1,150 @@
+/* Chart blocks */
+.block-charts .block-chart {
+	height: 400px;
+	max-height: 400px;
+	background: #f5f5f5;
+	padding: 20px 10px;
+	box-sizing: border-box;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.block-charts .block-chart.block-h300 {
+	height: 300px;
+	max-height: 300px;
+}
+.block-charts .block-chart.block-h350 {
+	height: 350px;
+	max-height: 350px;
+}
+.block-charts .block-chart.block-h500 {
+	height: 500px;
+	max-height: 500px;
+}
+.block-charts .block-chart.block-h550 {
+	height: 550px;
+	max-height: 550px;
+}
+.block-charts .block-chart.block-h600 {
+	height: 600px;
+	max-height: 600px;
+}
+
+/* Dashboard - Charts (Summary) */
+.block-charts.charts-summary .block-chart {
+	padding: 40px 30px 50px;
+}
+
+/* Dashboard - Tabs */
+.block-charts .tab-parent .tab-container {
+}
+.block-charts .tab-parent .tab-container .tab {
+	height: 50px;
+	line-height: 50px;
+	padding-top: 0;
+    padding-bottom: 0;
+	background: #fdfdfd;
+	border-color: #eaeaea;
+	border-top-width: 1px !important;
+	box-sizing: border-box;
+}
+.block-charts .tab-parent .tab-container .tab--selected {
+	background: #fff;
+    border-top-color: #1975FA;
+/* 	box-shadow: inset 0 1px 0 0 #1975FA; */
+}
+
+/* Add loading effect to charts */
+.block-charts .dash-graph {
+	position: relative;
+	overflow: hidden;
+}
+.block-charts .dash-graph[data-dash-is-loading="true"] {
+    opacity: 1;
+}
+.block-charts .dash-graph[data-dash-is-loading="true"]::before {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	content: '';
+	width: 100%;
+	height: 100%;
+	background: #ffff;
+	display: inline-block;
+	visibility: visible;
+}
+.block-charts .dash-graph[data-dash-is-loading="true"]::after {
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+	left: 50%;
+	content: '';
+	display: block;
+	width: 30px;
+	height: 30px;
+	margin: -15px 0 0 -15px;
+	background: rgba(0, 0, 0, 0.15);
+	-webkit-border-radius: 500px;
+	-moz-border-radius: 500px;
+	-ms-border-radius: 500px;
+	-o-border-radius: 500px;
+	border-radius: 500px;
+	-webkit-box-shadow: w7-loading-chart 1.5s infinite;
+	-moz-box-shadow: w7-loading-chart 1.5s infinite;
+	-ms-box-shadow: w7-loading-chart 1.5s infinite;
+	-o-box-shadow: w7-loading-chart 1.5s infinite;
+	animation: w7-loading-chart 1.5s infinite;
+}
+@keyframes w7-loading-chart {
+	0% {
+		transform: scale(0.8);
+		-webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.15);
+		-moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.15);
+		-ms-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.15);
+		-o-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.15);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.15);
+	}
+	75% {
+		transform: scale(1);
+		-webkit-box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
+		-moz-box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
+		-ms-box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
+		-o-box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
+		box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
+	}
+	100% {
+		transform: scale(0.8);
+		-webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+		-moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+		-ms-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+		-o-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
+
+#w7-content.style3 .block-charts .block-chart {
+    background: #fff;
+	padding: 30px 20px 25px;
+/* 	box-shadow: 0px 0px 5px 1px #eaeaea; */
+	border: 1px solid #eaeaea;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+}
+#w7-content.style3 .block-charts .tab-parent .tab-content .block-chart {
+	border-top: none;
+	-webkit-border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+	-ms-border-radius: 0 0 5px 5px;
+	-o-border-radius: 0 0 5px 5px;
+	border-radius: 0 0 5px 5px;
+}
+#w7-content.style3 .block-charts.charts-summary .block-chart {
+	padding: 35px 30px 45px;
+}

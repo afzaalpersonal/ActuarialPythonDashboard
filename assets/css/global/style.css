@@ -1,0 +1,217 @@
+/* Import external stylesheets */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;500;700;900&display=block');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;300;400;500;700;900&display=block');
+
+/* Base css styling */
+body {
+    margin: 0;
+	padding: 0;
+	background: #F7F7F7;
+	background: #fafafa;
+}
+body,
+button,
+input,
+select,
+textarea {
+	color: #888;
+	font-family: Open Sans, Helvetica, Arial;
+	font-size: 13px;
+	line-height: 1.7;
+	word-wrap: break-word;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Lato", sans-serif;
+	color: #000;
+	margin: 0 0 0.8em;
+	line-height: 1.5;
+}
+h1 {
+	font-size: 28px;
+}
+h2 {
+	font-size: 24px;
+}
+h3 {
+	font-size: 20px;
+}
+h4 {
+	font-size: 16px;
+}
+h5 {
+	font-size: 14px;
+}
+h6 {
+	font-size: 12px;
+}
+p {
+	margin: 0 0 20px;
+}
+
+/* Dashboard - Global */
+#w7-content {
+	min-width: 1200px;
+	overflow: hidden;
+	margin: 0 auto;
+	padding: 0;
+	background: #fff;
+}
+.container {
+	padding: 25px 40px;
+}
+.container .container-core {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.container.container-wide .container-core {
+	max-width: 100%;
+}
+
+/* Dashboard - Style 2 */
+#w7-content.style2 {
+	max-width: 1200px;
+	margin: 30px auto;
+	border: 1px solid #eaeaea;
+	border-radius: 5px;
+}
+
+/* Dashboard - Style 3 */
+#w7-content.style3 .container-charts {
+	background: #fafafa;
+/*
+	max-width: 1200px;
+	margin: 30px auto;
+	border: 1px solid #eaeaea;
+	border-radius: 5px;
+*/
+}
+
+/* Dashboard - Sidebar layout */
+#w7-content.sidebar-on #sidebar {
+    position: fixed;
+    z-index: 999;
+	width: 300px;
+    height: 100vh;
+    height: 100%;
+    background: #fff;
+	box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
+}
+#w7-content.sidebar-on #main {
+	margin-left: 300px;
+}
+
+#w7-content.sidebar-on #sidebar .container-header {
+	height: 260px;
+	padding: 30px 25px 22px;
+	box-sizing: border-box;
+}
+#w7-content.sidebar-on #sidebar .container-header img {
+	display: block;
+	margin: 0 auto 10px;
+}
+#w7-content.sidebar-on #sidebar .container-header h1 {
+	font-size: 23px;
+}
+
+#w7-content.sidebar-on #sidebar .container-components {
+    overflow: auto;
+	height: calc(100% - 260px);
+	border: none;
+	padding: 50px 30px;
+	box-sizing: border-box;
+}
+#w7-content.sidebar-on #sidebar .container-components .block-components {
+    grid-template-columns: 1fr;
+}
+#w7-content.sidebar-on #sidebar .container-components .block-components .row-item {
+	border-bottom: 1px dashed #ddd;
+	padding-bottom: 32px;
+}
+#w7-content.sidebar-on #sidebar .container-components .block-components .row-item:last-child {
+	border-bottom: none;
+}
+#w7-content.sidebar-on #sidebar .container-components .block-components .component-label {
+/* 	display: block; */
+}
+
+/* Dashboard - Header */
+.container-header {
+	text-align: center;
+	color: #fff;
+	background: #113458;
+	padding: 30px 40px;
+}
+.container-header img {
+	display: none;
+	width: 50px;
+}
+.container-header h1 {
+	color: #d9ab16;
+	margin-bottom: 10px;
+}
+.container-header p {
+	color: inherit;
+	margin-bottom: 5px;
+}
+
+/* Dashboard - Components */
+.container-components {
+	border-bottom: 1px solid #eaeaea;
+}
+.container-components .block-components .component-label {
+	display: block;
+	color: #000;
+	font-size: 14px;
+	line-height: 1;
+	border-left: 4px solid #ddd;
+	margin-bottom: 15px;
+	padding: 2px 10px;
+}
+
+/* Dashboard - Charts */
+.container-charts {
+	padding: 50px 40px;
+}
+
+/* Misc */
+.margin-b30 {
+	margin-bottom: 30px;
+}
+.margin-b40 {
+	margin-bottom: 40px;
+}
+.margin-b50 {
+	margin-bottom: 50px;
+}
+.hidden {
+	display: none !important;
+}
+
+/* Laptops */
+@media only screen and (max-width: 1366px) {
+
+	#w7-content.sidebar-on #sidebar {
+		width: 250px;
+	}
+	#w7-content.sidebar-on #main {
+		margin-left: 250px;
+	}
+
+	/* Container - Header */
+	#w7-content.sidebar-on #sidebar .container-header {
+		height: 230px;
+	}
+	#w7-content.sidebar-on #sidebar .container-header img {
+/* 		width: 50px; */
+	}
+
+	/* Container - Components */
+	#w7-content.sidebar-on #sidebar .container-components {
+		height: calc(100% - 230px);
+	}
+}

@@ -1,0 +1,87 @@
+/* CSS Grid */
+.block-grid {
+	display: grid;
+}
+
+/* Grid layouts */
+.block-grid.grid-col-1 {
+	grid-template-columns: 1fr;
+}
+.block-grid.grid-col-2 {
+	grid-template-columns: 1fr 1fr;
+}
+.block-grid.grid-col-2-1 {
+	grid-template-columns: 2fr 1fr;
+}
+.block-grid.grid-col-3 {
+	grid-template-columns: 1fr 1fr 1fr;
+}
+.block-grid.grid-col-4 {
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+/* Add range of grid sizes */
+.block-grid.grid-gap-20 {
+	grid-gap: 20px;
+}
+.block-grid.grid-gap-30 {
+	grid-gap: 30px;
+}
+.block-grid.grid-gap-40 {
+	grid-gap: 40px;
+}
+.block-grid.grid-gap-50 {
+	grid-gap: 50px;
+}
+.block-grid.grid-row-gap-20 {
+	row-gap: 20px;
+}
+.block-grid.grid-row-gap-30 {
+	row-gap: 30px;
+}
+.block-grid.grid-row-gap-40 {
+	row-gap: 40px;
+}
+.block-grid.grid-row-gap-50 {
+	row-gap: 50px;
+}
+.block-grid.grid-column-gap-20 {
+	column-gap: 20px;
+}
+.block-grid.grid-column-gap-30 {
+	column-gap: 30px;
+}
+.block-grid.grid-column-gap-40 {
+	column-gap: 40px;
+}
+.block-grid.grid-column-gap-50 {
+	column-gap: 50px;
+}
+
+/* Small laptops */
+@media only screen and (max-width: 1024px) {
+
+	.layout-responsive .block-grid.w1024-grid-col-1 {
+		grid-template-columns: 1fr;
+	}
+	.layout-responsive .block-grid.w1024-grid-col-2 {
+		grid-template-columns: 1fr 1fr;
+	}
+	.layout-responsive .block-grid.w1024-grid-col-3 {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+
+/* Small screens, laptops */
+@media only screen and (max-width: 800px) {
+
+	.layout-responsive .block-grid.w800-grid-col-1 {
+		grid-template-columns: 1fr;
+	}
+	.layout-responsive .block-grid.w800-grid-col-2 {
+		grid-template-columns: 1fr 1fr;
+	}
+	.layout-responsive .block-grid.w800-grid-col-3 {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}

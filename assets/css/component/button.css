@@ -1,0 +1,28 @@
+.button {
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    background: #fff;
+    padding: 5px 15px;
+	margin: 0 10px 10px 0;
+    border-radius: 3px;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.button:hover {
+	opacity: 0.8;
+}
+.button-m {
+    padding: 8px 20px;
+}
+.button-wide {
+	width: 100%;
+}
