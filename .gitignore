@@ -1,0 +1,4 @@
+# Do not commit following to Git: Visualiastion - Python Group
+local/
+.ipynb_checkpoints/
+*.ipynb

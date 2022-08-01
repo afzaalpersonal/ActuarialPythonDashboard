@@ -1,7 +1,9 @@
-# Visualisation - Python Group
+# Visualisation - Python
 > Instructions for getting started with Visualisations Python group
 
 ## About The Project
+
+The code in this repo is that developed by Afzaal Ahmed for the IFoA Data Science Working Party - Visualisation Worksteam. The private repo for the WP visualisation group can be found here: https://github.com/IFoADataScienceResearch/Visualisation
 
 This project uses the Plotly Dash library. The objective is to create a dashboard using the dataset: https://www.kaggle.com/floser/french-motor-claims-datasets-fremtpl2freq
 
