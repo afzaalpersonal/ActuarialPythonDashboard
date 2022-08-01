@@ -55,7 +55,7 @@ Any IDE is suitable for use. If you have an IDE with an integrated terminal it w
 Clone remote repo locally using command:
 
 ```
-git clone https://github.com/IFoADataScienceResearch/Visualisation.git
+git clone https://github.com/afzaalpersonal/ActuarialPythonDashboard.git
 ```
 
 This will open a popup for GitHub which prompts for login credentials to access the private repo.
