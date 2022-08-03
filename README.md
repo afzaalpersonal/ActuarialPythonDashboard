@@ -5,7 +5,7 @@
 
 Live version: https://ifoa-dataviz-python.herokuapp.com/
 
-The code in this repo is that developed by [Afzaal Ahmed](https://www.linkedin.com/in/afzaalahmeduk/) for the IFoA Data Science Working Party - Visualisation Worksteam. The private repo for the WP visualisation group can be found here: https://github.com/IFoADataScienceResearch/Visualisation
+The code in this repo was developed by [Afzaal Ahmed](https://www.linkedin.com/in/afzaalahmeduk/) for the IFoA Data Science Working Party - Visualisation Workstream. The private repo for the WP visualisation group can be found here: https://github.com/IFoADataScienceResearch/Visualisation
 
 This project uses the Plotly Dash library. The objective is to create a dashboard using the dataset: https://www.kaggle.com/floser/french-motor-claims-datasets-fremtpl2freq
 
