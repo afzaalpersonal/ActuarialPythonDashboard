@@ -180,28 +180,28 @@ def chart_mixed_total(
     df = pd.DataFrame(data)
 
     # Extract specific data
-    dfClaims0 = df
-    dfClaims1 = df.loc[(df['ClaimNb'] >= 1)]
+    df_claims0 = df
+    df_claims1 = df.loc[(df['ClaimNb'] >= 1)]
 
     # Initiate chart
     fig = go.Figure()
 
     # Get list of all areas in ascending order
-    unique_values = np.sort(dfClaims0[type].unique())
+    unique_values = np.sort(df_claims0[type].unique())
 
     # Construct data variables for each area
     for i in unique_values:
 
 		# Update dict for total claim numbers
-        total0.append(dfClaims0.loc[dfClaims0[type] == i, 'ClaimNb'].count())
-        total1.append(dfClaims1.loc[dfClaims1[type] == i, 'ClaimNb'].sum())
+        total0.append(df_claims0.loc[df_claims0[type] == i, 'ClaimNb'].count())
+        total1.append(df_claims1.loc[df_claims1[type] == i, 'ClaimNb'].sum())
 
 		# Only proceed if claim rate is needed
         if rate == True:
 
 			# Update dict for total claim rates
-            rate0 = dfClaims0.loc[dfClaims0[type] == i, 'ClaimNb'].count()
-            rate1 = dfClaims1.loc[dfClaims1[type] == i, 'ClaimNb'].sum()
+            rate0 = df_claims0.loc[df_claims0[type] == i, 'ClaimNb'].count()
+            rate1 = df_claims1.loc[df_claims1[type] == i, 'ClaimNb'].sum()
 
             rate = round(rate1 / rate0, 3)
 

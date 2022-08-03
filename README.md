@@ -5,7 +5,7 @@
 
 Live version: https://ifoa-dataviz-python.herokuapp.com/
 
-The code in this repo is that developed by Afzaal Ahmed for the IFoA Data Science Working Party - Visualisation Worksteam. The private repo for the WP visualisation group can be found here: https://github.com/IFoADataScienceResearch/Visualisation
+The code in this repo is that developed by [Afzaal Ahmed](https://www.linkedin.com/in/afzaalahmeduk/) for the IFoA Data Science Working Party - Visualisation Worksteam. The private repo for the WP visualisation group can be found here: https://github.com/IFoADataScienceResearch/Visualisation
 
 This project uses the Plotly Dash library. The objective is to create a dashboard using the dataset: https://www.kaggle.com/floser/french-motor-claims-datasets-fremtpl2freq
 
@@ -51,6 +51,8 @@ Guides on installing the above can be found here if needed:
 Any terminal capable of running pip and Git commands is suitable for use.
 
 Any IDE is suitable for use. If you have an IDE with an integrated terminal it will make it a little easier to develop. [VS Code](https://code.visualstudio.com/) is open source and comes with a range of packages which integrate nicely with Python for debugging and Git, it also comes with a built-in terminal.
+
+Note: Prefix "dsv" to avoid conflict with 3rd party libraries.
 
 ## Launching Project Code
 
