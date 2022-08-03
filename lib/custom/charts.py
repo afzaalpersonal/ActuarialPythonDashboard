@@ -172,9 +172,9 @@ def chart_mixed_total(
     }
 
     # Assign default variable values
-    Rates  = []
-    Total0 = []
-    Total1 = []
+    rates  = []
+    total0 = []
+    total1 = []
 
     # Convert to data frame
     df = pd.DataFrame(data)
@@ -187,42 +187,42 @@ def chart_mixed_total(
     fig = go.Figure()
 
     # Get list of all areas in ascending order
-    UniqueValues = np.sort(dfClaims0[type].unique())
+    unique_values = np.sort(dfClaims0[type].unique())
 
     # Construct data variables for each area
-    for i in UniqueValues:
+    for i in unique_values:
 
 		# Update dict for total claim numbers
-        Total0.append(dfClaims0.loc[dfClaims0[type] == i, 'ClaimNb'].count())
-        Total1.append(dfClaims1.loc[dfClaims1[type] == i, 'ClaimNb'].sum())
+        total0.append(dfClaims0.loc[dfClaims0[type] == i, 'ClaimNb'].count())
+        total1.append(dfClaims1.loc[dfClaims1[type] == i, 'ClaimNb'].sum())
 
 		# Only proceed if claim rate is needed
         if rate == True:
 
 			# Update dict for total claim rates
-            Rate0 = dfClaims0.loc[dfClaims0[type] == i, 'ClaimNb'].count()
-            Rate1 = dfClaims1.loc[dfClaims1[type] == i, 'ClaimNb'].sum()
+            rate0 = dfClaims0.loc[dfClaims0[type] == i, 'ClaimNb'].count()
+            rate1 = dfClaims1.loc[dfClaims1[type] == i, 'ClaimNb'].sum()
 
-            Rate = round(Rate1 / Rate0, 3)
+            rate = round(rate1 / rate0, 3)
 
 			# This check ensure that line graph doesn't drop to zero where no claims data is present for the step
-            if Rate > 0:
-                Rates.append(Rate)
+            if rate > 0:
+                rates.append(rate)
             else:
-                Rates.append(None)
+                rates.append(None)
 
     # Assign color for bars
-    colors0 = ['#d9ab16',] * len( UniqueValues )
-    colors1 = ['#113458',] * len( UniqueValues )
-    colors2 = ['#519dcc',] * len( UniqueValues )
+    colors0 = ['#d9ab16',] * len( unique_values )
+    colors1 = ['#113458',] * len( unique_values )
+    colors2 = ['#519dcc',] * len( unique_values )
 
     # Add data to chart
     fig.add_trace(
         go.Bar(
             name              = 'Policies',
             legendgroup       = 'Policies',
-            x                 = UniqueValues,
-            y                 = Total0,
+            x                 = unique_values,
+            y                 = total0,
             yaxis             = 'y1',
             opacity           = 1,
             marker_color      = colors0,
@@ -238,8 +238,8 @@ def chart_mixed_total(
         go.Bar(
             name              = 'Claims',
             legendgroup       = 'Claims',
-            x                 = UniqueValues,
-            y                 = Total1,
+            x                 = unique_values,
+            y                 = total1,
             yaxis             = 'y1',
             opacity           = 1,
             marker_color      = colors1,
@@ -260,8 +260,8 @@ def chart_mixed_total(
                 mode              = 'lines+markers',
                 name              = 'Claim Rate',
                 legendgroup       = 'Claim Rate',
-                x                 = UniqueValues,
-                y                 = Rates,
+                x                 = unique_values,
+                y                 = rates,
                 yaxis             = 'y2',
                 opacity           = 1,
                 line_color        = colors2[0],
@@ -353,37 +353,37 @@ def chart_bubble_mixed(
     fig = go.Figure()
 
     # Get bubble sizes
-    VehBrand = df['VehBrand']
-    ClaimNb  = df['ClaimNb']
-    Exposure = df['Exposure']
-    IDpol    = df['IDpol']
+    veh_brand = df['VehBrand']
+    claim_nb  = df['ClaimNb']
+    exposure  = df['Exposure']
+    id_pol    = df['IDpol']
 
     # Rebase claim numbers to claim rate if needed
     if rate == True:
-        ClaimNb = round( ClaimNb / IDpol, 3)
-        y_title = 'Claim Rate'
+        claim_nb = round( claim_nb / id_pol, 3)
+        y_title  = 'Claim Rate'
 
     # Set bubble sizes
-    sizes = sizeref_min + (sizeref_max - sizeref_min) * np.array(Exposure) / max(Exposure)
+    sizes = sizeref_min + (sizeref_max - sizeref_min) * np.array(exposure) / max(exposure)
 
     # Construct tooltips
-    for k, v in VehBrand.items():
+    for k, v in veh_brand.items():
 
         # Change tooltop content depending on chart type (claims or claim rate)
         if rate == True:
-            data_tooltips.append('Brand: {}<br />Claims: {}<br />Exposure: {}<extra></extra>'.format(VehBrand[k], round(ClaimNb[k], 3), numerize.numerize(int(Exposure[k]), 1)))
+            data_tooltips.append('Brand: {}<br />Claims: {}<br />Exposure: {}<extra></extra>'.format(veh_brand[k], round(claim_nb[k], 3), numerize.numerize(int(exposure[k]), 1)))
         else:
-            data_tooltips.append('Brand: {}<br />Claims: {}<br />Exposure: {}<extra></extra>'.format(VehBrand[k], numerize.numerize(int(ClaimNb[k]), 1), numerize.numerize(int(Exposure[k]), 1)))
+            data_tooltips.append('Brand: {}<br />Claims: {}<br />Exposure: {}<extra></extra>'.format(veh_brand[k], numerize.numerize(int(claim_nb[k]), 1), numerize.numerize(int(exposure[k]), 1)))
 
     # Assign color for bars
-    colors  = ['#519dcc',] * len( VehBrand )
-    opacity = [1,] * len( VehBrand )
+    colors  = ['#519dcc',] * len( veh_brand )
+    opacity = [1,] * len( veh_brand )
 
     # Add data to chart
     fig.add_trace(
         go.Scatter(
-            x            = VehBrand,
-            y            = ClaimNb,
+            x            = veh_brand,
+            y            = claim_nb,
             mode         = 'markers',
             marker_color = colors,
             marker       = dict(
@@ -455,10 +455,10 @@ def chart_pie_fuel(
     df = pd.DataFrame(data)
 
     # Get list of all areas in ascending order
-    UniqueValues = np.sort(df['VehGas'].unique())
+    unique_values = np.sort(df['VehGas'].unique())
 
     # Construct data variables for each area
-    for i in UniqueValues:
+    for i in unique_values:
 
         # Get total number of policies
         value = np.sum(df['VehGas'] == i)
@@ -546,21 +546,21 @@ def chart_mixed_area(
     fig = go.Figure()
 
     # Get list of all areas in ascending order
-    UniqueValues = np.sort(df[type].unique())
+    unique_values = np.sort(df[type].unique())
 
     # Get bubble sizes
-    Exposure = df['Exposure']
+    exposure = df['Exposure']
 
     # Set bubble sizes
-    sizes = sizeref_min + (sizeref_max - sizeref_min) * np.array(Exposure) / max(Exposure)
+    sizes = sizeref_min + (sizeref_max - sizeref_min) * np.array(exposure) / max(exposure)
 
     # Assign color for various chart sections
-    colors0 = ['#d9ab16',] * len( UniqueValues )
-    colors1 = ['#113458',] * len( UniqueValues )
-    colors2 = ['#519dcc',] * len( UniqueValues )
+    colors0 = ['#d9ab16',] * len( unique_values )
+    colors1 = ['#113458',] * len( unique_values )
+    colors2 = ['#519dcc',] * len( unique_values )
 
     # Ensure bubbles are not opaque
-    opacity = [1,] * len( UniqueValues )
+    opacity = [1,] * len( unique_values )
 
     # Add data to chart
     fig.add_trace( # Bar chart for total policies

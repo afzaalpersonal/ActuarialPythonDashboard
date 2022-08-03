@@ -112,7 +112,7 @@ line-height: 50px;
 }
 
 /* Dashboard - Global */
-#w7-content {
+#dsv-content {
 	min-width: 1200px;
 	overflow: hidden;
 	margin: 0 auto;
@@ -131,7 +131,7 @@ line-height: 50px;
 }
 
 /* Dashboard - Style 2 */
-#w7-content.style2 {
+#dsv-content.style2 {
 	max-width: 1200px;
 	margin: 30px auto;
 	border: 1px solid #eaeaea;
@@ -139,7 +139,7 @@ line-height: 50px;
 }
 
 /* Dashboard - Style 3 */
-#w7-content.style3 .container-charts {
+#dsv-content.style3 .container-charts {
 	background: #fafafa;
 /*
 	max-width: 1200px;
@@ -150,7 +150,7 @@ line-height: 50px;
 }
 
 /* Dashboard - Sidebar layout */
-#w7-content.sidebar-on #sidebar {
+#dsv-content.sidebar-on #sidebar {
     position: fixed;
     z-index: 999;
 	width: 300px;
@@ -159,41 +159,41 @@ line-height: 50px;
     background: #fff;
 	box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
 }
-#w7-content.sidebar-on #main {
+#dsv-content.sidebar-on #main {
 	margin-left: 300px;
 }
 
-#w7-content.sidebar-on #sidebar .container-header {
+#dsv-content.sidebar-on #sidebar .container-header {
 	height: 260px;
 	padding: 30px 25px 22px;
 	box-sizing: border-box;
 }
-#w7-content.sidebar-on #sidebar .container-header img {
+#dsv-content.sidebar-on #sidebar .container-header img {
 	display: block;
 	margin: 0 auto 10px;
 }
-#w7-content.sidebar-on #sidebar .container-header h1 {
+#dsv-content.sidebar-on #sidebar .container-header h1 {
 	font-size: 23px;
 }
 
-#w7-content.sidebar-on #sidebar .container-components {
+#dsv-content.sidebar-on #sidebar .container-components {
     overflow: auto;
 	height: calc(100% - 260px);
 	border: none;
 	padding: 50px 30px;
 	box-sizing: border-box;
 }
-#w7-content.sidebar-on #sidebar .container-components .block-components {
+#dsv-content.sidebar-on #sidebar .container-components .block-components {
     grid-template-columns: 1fr;
 }
-#w7-content.sidebar-on #sidebar .container-components .block-components .row-item {
+#dsv-content.sidebar-on #sidebar .container-components .block-components .row-item {
 	border-bottom: 1px dashed #ddd;
 	padding-bottom: 32px;
 }
-#w7-content.sidebar-on #sidebar .container-components .block-components .row-item:last-child {
+#dsv-content.sidebar-on #sidebar .container-components .block-components .row-item:last-child {
 	border-bottom: none;
 }
-#w7-content.sidebar-on #sidebar .container-components .block-components .component-label {
+#dsv-content.sidebar-on #sidebar .container-components .block-components .component-label {
 /* 	display: block; */
 }
 
@@ -253,23 +253,23 @@ line-height: 50px;
 /* Laptops */
 @media only screen and (max-width: 1366px) {
 
-	#w7-content.sidebar-on #sidebar {
+	#dsv-content.sidebar-on #sidebar {
 		width: 250px;
 	}
-	#w7-content.sidebar-on #main {
+	#dsv-content.sidebar-on #main {
 		margin-left: 250px;
 	}
 
 	/* Container - Header */
-	#w7-content.sidebar-on #sidebar .container-header {
+	#dsv-content.sidebar-on #sidebar .container-header {
 		height: 230px;
 	}
-	#w7-content.sidebar-on #sidebar .container-header img {
+	#dsv-content.sidebar-on #sidebar .container-header img {
 /* 		width: 50px; */
 	}
 
 	/* Container - Components */
-	#w7-content.sidebar-on #sidebar .container-components {
+	#dsv-content.sidebar-on #sidebar .container-components {
 		height: calc(100% - 230px);
 	}
 }

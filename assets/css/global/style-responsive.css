@@ -17,43 +17,43 @@
 /* Style 3 - Collapse styling */
 @media only screen and (max-width: 1024px) {
 
-	/* #w7-content */
-	#w7-content.style3.style3-mobile {
+	/* #dsv-content */
+	#dsv-content.style3.style3-mobile {
 		max-width: 100%;
 		min-width: 480px;
 	}
 
 	/* #main */
-	#w7-content.style3.style3-mobile.sidebar-on #main {
+	#dsv-content.style3.style3-mobile.sidebar-on #main {
 		margin-left: 0;
 	}
-	#w7-content.style3.style3-mobile.sidebar-on #main .container-charts .block-charts {
+	#dsv-content.style3.style3-mobile.sidebar-on #main .container-charts .block-charts {
 		grid-template-columns: 1fr;
 	}
 
 	/* #Sidebar */
-	#w7-content.style3.style3-mobile.sidebar-on #sidebar {
+	#dsv-content.style3.style3-mobile.sidebar-on #sidebar {
 		position: static;
 		width: 100%;
 	}
-	#w7-content.style3.style3-mobile.sidebar-on #sidebar .container-header {
+	#dsv-content.style3.style3-mobile.sidebar-on #sidebar .container-header {
 		height: auto;
 	}
-	#w7-content.style3.style3-mobile.sidebar-on #sidebar .container-header .container-core {
+	#dsv-content.style3.style3-mobile.sidebar-on #sidebar .container-header .container-core {
 		max-width: 320px;
 	}
-	#w7-content.style3.style3-mobile.sidebar-on #sidebar .container-components {
+	#dsv-content.style3.style3-mobile.sidebar-on #sidebar .container-components {
 		position: relative;
 		padding-bottom: 70px;
 	}
-	#w7-content.style3.style3-mobile.sidebar-on #sidebar .container-components .block-components {
+	#dsv-content.style3.style3-mobile.sidebar-on #sidebar .container-components .block-components {
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 	}
-	#w7-content.style3.style3-mobile.sidebar-on #sidebar .container-components .block-components .row-item {
+	#dsv-content.style3.style3-mobile.sidebar-on #sidebar .container-components .block-components .row-item {
 		border-bottom: none;
 		padding-bottom: 20px;
 	}
-	#w7-content.style3.style3-mobile.sidebar-on #sidebar .container-components .block-components .row-item.row-download {
+	#dsv-content.style3.style3-mobile.sidebar-on #sidebar .container-components .block-components .row-item.row-download {
 		position: absolute;
 		bottom: 10px;
 		left: 0;
@@ -66,13 +66,12 @@
 
 @media only screen and (max-width: 800px) {
 
-	/* #w7-content */
-	#w7-content {
-		background: red !important;
+	/* #dsv-content */
+	#dsv-content {
 	}
 
 	/* #Sidebar */
-	#w7-content.style3.style3-mobile.sidebar-on #sidebar .container-components .block-components {
+	#dsv-content.style3.style3-mobile.sidebar-on #sidebar .container-components .block-components {
 		grid-template-columns: 1fr 1fr;
 	}
 }
